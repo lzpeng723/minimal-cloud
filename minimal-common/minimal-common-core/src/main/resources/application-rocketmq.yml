@@ -1,0 +1,25 @@
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    # group 必填
+    group: producer-group
+spring:
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+        bindings:
+          output:
+            producer:
+              # 开启分布式事务
+              transactional: true
+              # 事务名
+              group: tx-add-bouns-group
+      bindings:
+        output:
+          # 用来指定 Topic
+          destination: add-bouns
+        my-output:
+          # 用来指定 Topic
+          destination: my-stream-test-topic

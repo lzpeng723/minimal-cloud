@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 是否让 gateway 通过服务发现组件找到其它的微服务
+          enabled: true
+      default-filters:
+        - PreLog=a,b
+      routes:
+        - id: minimal-system
+          uri: lb://minimal-system
+          predicates:
+            - Path=/system/**,/oauth/**
+        - id: minimal-tool
+          uri: lb://minimal-tool
+          predicates:
+            - Path=/tool/**
+        - id: minimal-sample-jpa
+          uri: lb://minimal-sample-jpa
+          predicates:
+            - Path=/samplejpa/**
+        - id: minimal-demo
+          uri: lb://minimal-demo
+          predicates:
+            - Path=/demo/**

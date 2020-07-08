@@ -1,0 +1,3 @@
+project:
+  build:
+    outputDirectory: @project.build.outputDirectory@

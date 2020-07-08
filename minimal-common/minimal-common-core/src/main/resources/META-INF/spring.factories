@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.hutool.extra.spring.SpringUtil,\
+  com.lzpeng.minimal.common.core.MinimalAutoConfiguration
+
+  

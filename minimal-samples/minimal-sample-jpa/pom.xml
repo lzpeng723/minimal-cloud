@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>minimal-cloud</artifactId>
+        <groupId>com.lzpeng</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>minimal-sample-jpa</artifactId>
+    <description>minimal-sample-jpa JPA代码示例</description>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- 公共 模块 -->
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>minimal-common-core</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- 公共 API -->
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>minimal-common-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- 安全 模块 -->
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>minimal-common-security</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- JPA 模块 -->
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>minimal-common-jpa</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- Swagger 模块 -->
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>minimal-common-swagger</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- WEB 模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- 测试 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Security 测试 -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- JPA 代码生成模块 -->
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>minimal-generate-jpa</artifactId>
+            <version>${project.parent.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+            <!-- Spring Boot 打包工具 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- Query DSL 代码生成工具 -->
+            <plugin>
+                <groupId>com.mysema.maven</groupId>
+                <artifactId>apt-maven-plugin</artifactId>
+            </plugin>
+            <!-- API 文档生成工具 -->
+            <plugin>
+                <groupId>com.github.apiggs</groupId>
+                <artifactId>apiggs-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    sentinel:
+      transport:
+        # 指定 sentinel 控制台地址
+        dashboard: localhost:8080
+      filter:
+        # 是否启用对Spring MVC 端点的保护
+        enabled: true
+      # 是否提前触发 Sentinel 初始化
+      eager: true
+resttemplate:
+  sentinel:
+    # 是否启用 @SentinelRestTemplate 注解
+    enabled: true
+feign:
+  sentinel:
+    # 为 feign 整合 sentinel
+    enabled: true

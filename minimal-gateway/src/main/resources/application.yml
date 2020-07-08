@@ -1,0 +1,8 @@
+spring:
+  application:
+    # 尽量用中划线 不要用下划线 更不要用特殊字符
+    name: @project.artifactId@
+  profiles:
+    active: actuator, nacos, ribbon, feign, sentinel, zipkin, gateway
+server:
+  port: 8888

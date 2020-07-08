@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.lzpeng.minimal.common.api.MinimalApiAutoConfiguration
+
+  

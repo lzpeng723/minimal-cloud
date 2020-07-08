@@ -1,0 +1,10 @@
+[
+  {
+    "name": "超级管理员",
+    "number": "ADMIN"
+  },
+  {
+    "name": "预设用户",
+    "number": "USER"
+  }
+]

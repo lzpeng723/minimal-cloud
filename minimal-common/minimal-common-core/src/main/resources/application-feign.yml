@@ -1,0 +1,18 @@
+feign:
+  client:
+    config:
+      # 全局配置
+      default:
+        loggerLevel: full
+        # 全局拦截器
+        requestInterceptors:
+          - com.lzpeng.minimal.common.core.config.feign.FeignRelayHeaderInterceptor # 传递请求头的参数
+  # 性能优化
+  httpclient:
+    # 让 feign 使用 apache httpclient 请求, 而不是默认的 UrlConnection
+    enabled: true
+    # 结合压测使其达到最优
+    # feign 的最大连接数
+    max-connections: 200
+    # feign 单个路径最大连接数
+    max-connections-per-route: 50

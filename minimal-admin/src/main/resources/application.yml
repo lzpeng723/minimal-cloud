@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: @project.artifactId@
+  profiles:
+    active: actuator, nacos, ribbon, feign, sentinel, zipkin
+server:
+  port: 10001

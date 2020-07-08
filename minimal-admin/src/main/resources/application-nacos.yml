@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        # 指定 nacos server 地址, 不要写协议 (http/https)
+        server-addr: localhost:8848
+        metadata:
+          version: 0.0.1-SNAPSHOT

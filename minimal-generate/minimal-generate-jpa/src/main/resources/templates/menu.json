@@ -1,0 +1,79 @@
+{
+  "name": "${moduleName?cap_first}",
+  "path": "/${moduleName}",
+  "redirect": "noRedirect",
+  "component": "@/layout/index",
+  "alwaysShow": true,
+  "orderNum": 1,
+  "type": 0,
+  "title": "${moduleName}",
+  "icon": "icon",
+  "children": [
+    {
+      "name": "Gen",
+      "path": "${simpleClassName?uncap_first}",
+      "component": "@/views/${moduleName}/${simpleClassName?uncap_first}/index",
+      "orderNum": 7,
+      "number": "${moduleName}:${simpleClassName?uncap_first}:list",
+      "type": 1,
+      "title": "${chineseClassName!${simpleClassName}}配置",
+      "icon": "icon",
+      "children": [
+        {
+          "name": "${moduleName?cap_first}Query",
+          "orderNum": 1,
+          "number": "${moduleName}:${simpleClassName?uncap_first}:query",
+          "type": 2,
+          "title": "${chineseClassName!${simpleClassName}}查询"
+        },
+        {
+          "name": "${moduleName?cap_first}Add",
+          "orderNum": 2,
+          "number": "${moduleName}:${simpleClassName?uncap_first}:add",
+          "type": 2,
+          "title": "${chineseClassName!${simpleClassName}}新增"
+        },
+        {
+          "name": "${moduleName?cap_first}Edit",
+          "orderNum": 3,
+          "number": "${moduleName}:${simpleClassName?uncap_first}:edit",
+          "type": 2,
+          "title": "${chineseClassName!${simpleClassName}}修改"
+        },
+        {
+          "name": "${moduleName?cap_first}Delete",
+          "orderNum": 4,
+          "number": "${moduleName}:${simpleClassName?uncap_first}:delete",
+          "type": 2,
+          "title": "${chineseClassName!${simpleClassName}}删除"
+        },
+        {
+          "name": "${moduleName?cap_first}Import",
+          "orderNum": 5,
+          "number": "${moduleName}:${simpleClassName?uncap_first}:import",
+          "type": 2,
+          "title": "${chineseClassName!${simpleClassName}}导入"
+        },
+        {
+          "name": "${moduleName?cap_first}Export",
+          "orderNum": 6,
+          "number": "${moduleName}:${simpleClassName?uncap_first}:export",
+          "type": 2,
+          "title": "${chineseClassName!${simpleClassName}}导出"
+        }
+      ]
+    },
+    {
+      "name": "${moduleName?cap_first}Detail",
+      "path": "/${moduleName}/${simpleClassName?uncap_first}/:id",
+      "component": "@/views/${moduleName}/${simpleClassName?uncap_first}/${moduleName?cap_first}Detail",
+      "orderNum": 8,
+      "number": "${moduleName}:${simpleClassName?uncap_first}:detail",
+      "type": 1,
+      "title": "${chineseClassName!${simpleClassName}}详情",
+      "icon": "icon",
+      "activeMenu": "/${moduleName}/${simpleClassName?uncap_first}",
+      "hidden": true
+    }
+  ]
+}
