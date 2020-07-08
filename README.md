@@ -71,8 +71,8 @@ com.lzpeng.minimal
 - admin/mcadmin
 - user/mcuser
 
-演示地址：[http://lzpeng723.github.io/minimal-cloud](http://lzpeng723.github.io/minimal-cloud)
-文档地址：[http://lzpeng723.github.io/minimal-cloud/doc](http://lzpeng723.github.io/minimal-cloud/doc)
+演示地址：~~[http://lzpeng723.github.io/minimal-cloud](http://lzpeng723.github.io/minimal-cloud)~~
+文档地址：[http://lzpeng723.github.io/minimal-cloud](http://lzpeng723.github.io/minimal-cloud)
 
 ## 演示图
 <img src="#"/>
